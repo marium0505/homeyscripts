@@ -14,12 +14,11 @@ postJSON(HeaterURL + "set-temperature", json);
 async function postJSON(URL, data) {
 	try {
 		const response = await fetch(URL, {
-			method: "POST", // or 'PUT'
+			method: "POST",
 			body: JSON.stringify(data),
 		});
 		const result = await response.json();
 		console.log("Success:", result);
-		//return "Success:", result
 	} catch (error) {
 		console.error("Error:", error);
 	}
